@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 320px;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+.app {
+  width: 320px;
+  padding: 14px;
+  margin: 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: #2563eb;
+  color: white;
+  border-radius: 9px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.header h1 {
+  font-size: 17px;
+  margin: 0;
+}
+
+.header p {
+  font-size: 11px;
+  color: #64748b;
+  margin: 4px 0 0;
+}
+
+/* Recording section */
+.recording-section {
+  background: white;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.recording-section h2,
+.workflows-section h2 {
+  font-size: 14px;
+  margin: 14px 0 8px;
+}
+
+.recording-section p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 8px 0;
+}
+
+.record-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.record-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Saved workflows */
+.workflows-section {
+  margin-top: 18px;
+}
+
+.empty-state {
+  background: white;
+  border: 1px dashed #cbd5e1;
+  border-radius: 9px;
+  padding: 18px 10px;
+  text-align: center;
+}
+
+.empty-state p {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 0 6px;
+}
+
+.empty-state span {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+footer {
+  text-align: center;
+  font-size: 10px;
+  color: #94a3b8;
+  margin-top: 18px;
+}
+
+.confirmation-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+}
+
+.confirmation-dialog {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-dialog h3 {
+  font-size: 15px;
+  margin: 0 0 12px;
+  color: #1e293b;
+}
+
+.confirmation-dialog p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0 0 12px;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.confirmation-actions button {
+  min-width: 75px;
+  padding: 8px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.confirmation-actions button:first-child:hover {
+  background: #f1f5f9;
+}
+
+.confirmation-actions button:last-child {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  font-weight: 600;
+}
+
+.confirmation-actions button:last-child:hover {
+  background: #1d4ed8;
+}
+
+.update-button {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  border: 1px solid #2563eb;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.update-button:hover:not(:disabled) {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.update-button:disabled {
+  background: #94a3b8;
+  border-color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.confirmation-dialog input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+}
+
+.confirmation-dialog input:focus {
+  border-color: #2563eb;
+}

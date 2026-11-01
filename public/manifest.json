@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "FlowRecorder",
+  "version": "1.0.0",
+  "description": "Record and replay browser workflows for faster testing.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+  "storage",
+  "activeTab",
+  "scripting",
+  "tabs"
+]
+}
